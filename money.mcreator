@@ -1,0 +1,958 @@
+{
+  "mod_elements": [
+    {
+      "name": "CreditCard",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "credit_card",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/money/models/item/credit_card.json",
+          "src/main/resources/assets/money/items/credit_card.json",
+          "src/main/java/net/mcreator/money/item/CreditCardItem.java"
+        ]
+      }
+    },
+    {
+      "name": "Coin",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "coin",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/money/models/item/coin.json",
+          "src/main/resources/assets/money/items/coin.json",
+          "src/main/java/net/mcreator/money/item/CoinItem.java"
+        ]
+      }
+    },
+    {
+      "name": "Cardmakerguibutton",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cardmakerguibutton",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/money/procedures/CardmakerguibuttonProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Cardmakergui",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cardmakergui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/money/network/CardmakerguiButtonMessage.java",
+          "src/main/java/net/mcreator/money/client/gui/CardmakerguiScreen.java",
+          "src/main/java/net/mcreator/money/world/inventory/CardmakerguiMenu.java"
+        ]
+      }
+    },
+    {
+      "name": "CardMaker",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "card_maker",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/money/block/CardMakerBlock.java",
+          "src/main/resources/assets/money/models/item/card_maker.json",
+          "src/main/resources/data/money/loot_table/blocks/card_maker.json",
+          "src/main/resources/assets/money/models/block/card_maker.json",
+          "src/main/resources/assets/money/blockstates/card_maker.json",
+          "src/main/resources/assets/money/items/card_maker.json"
+        ]
+      }
+    },
+    {
+      "name": "Atmgui",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "atmgui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/money/network/AtmguiButtonMessage.java",
+          "src/main/java/net/mcreator/money/network/AtmguiSlotMessage.java",
+          "src/main/java/net/mcreator/money/client/gui/AtmguiScreen.java",
+          "src/main/java/net/mcreator/money/world/inventory/AtmguiMenu.java"
+        ]
+      }
+    },
+    {
+      "name": "ATM",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "atm",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/money/models/item/atm.json",
+          "src/main/resources/data/money/loot_table/blocks/atm.json",
+          "src/main/resources/assets/money/items/atm.json",
+          "src/main/java/net/mcreator/money/block/ATMBlock.java",
+          "src/main/resources/assets/money/models/block/atm.json",
+          "src/main/resources/assets/money/blockstates/atm.json"
+        ]
+      }
+    },
+    {
+      "name": "Checkcreditcommandprocedure",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "checkcreditcommandprocedure",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/money/procedures/CheckcreditcommandprocedureProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Exchangeguiprocedure",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "exchangeguiprocedure",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/money/procedures/ExchangeguiprocedureProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Exchangegui",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "exchangegui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/money/world/inventory/ExchangeguiMenu.java",
+          "src/main/java/net/mcreator/money/network/ExchangeguiButtonMessage.java",
+          "src/main/java/net/mcreator/money/client/gui/ExchangeguiScreen.java"
+        ]
+      }
+    },
+    {
+      "name": "ExchangeBlock",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "exchange_block",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/money/loot_table/blocks/exchange_block.json",
+          "src/main/java/net/mcreator/money/block/ExchangeBlockBlock.java",
+          "src/main/resources/assets/money/models/item/exchange_block.json",
+          "src/main/resources/assets/money/blockstates/exchange_block.json",
+          "src/main/resources/assets/money/models/block/exchange_block.json",
+          "src/main/resources/assets/money/items/exchange_block.json"
+        ]
+      }
+    },
+    {
+      "name": "GoldCreditCard",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gold_credit_card",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/money/items/gold_credit_card.json",
+          "src/main/java/net/mcreator/money/item/GoldCreditCardItem.java",
+          "src/main/resources/assets/money/models/item/gold_credit_card.json"
+        ]
+      }
+    },
+    {
+      "name": "Cardupgraderprocedure",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cardupgraderprocedure",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/money/procedures/CardupgraderprocedureProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Cardupgradergui",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cardupgradergui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/money/client/gui/CardupgraderguiScreen.java",
+          "src/main/java/net/mcreator/money/network/CardupgraderguiButtonMessage.java",
+          "src/main/java/net/mcreator/money/world/inventory/CardupgraderguiMenu.java"
+        ]
+      }
+    },
+    {
+      "name": "Cardupgrader",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cardupgrader",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/money/loot_table/blocks/cardupgrader.json",
+          "src/main/resources/assets/money/models/block/cardupgrader.json",
+          "src/main/resources/assets/money/items/cardupgrader.json",
+          "src/main/java/net/mcreator/money/block/CardupgraderBlock.java",
+          "src/main/resources/assets/money/blockstates/cardupgrader.json",
+          "src/main/resources/assets/money/models/item/cardupgrader.json"
+        ]
+      }
+    },
+    {
+      "name": "Credit",
+      "type": "command",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "creditcheckcommand",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/money/command/CreditCommand.java"
+        ]
+      }
+    },
+    {
+      "name": "Creditaddprocedure",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "creditaddprocedure",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/money/procedures/CreditaddprocedureProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Creditminusprocedure",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "creditminusprocedure",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/money/procedures/CreditminusprocedureProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Paymentmachineplacementprocedure",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "paymentmachineplacementprocedure",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/money/procedures/PaymentmachineplacementprocedureProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Paymentmachineownerguistartpayment",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "paymentmachineownerguistartpayment",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/money/procedures/PaymentmachineownerguistartpaymentProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Paymentmachineownergui",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "paymentmachineownergui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/money/client/gui/PaymentmachineownerguiScreen.java",
+          "src/main/java/net/mcreator/money/network/PaymentmachineownerguiButtonMessage.java",
+          "src/main/java/net/mcreator/money/world/inventory/PaymentmachineownerguiMenu.java"
+        ]
+      }
+    },
+    {
+      "name": "Paymentmachineguiprocesspayment",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "paymentmachineguiprocesspayment",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/money/procedures/PaymentmachineguiprocesspaymentProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Paymentmachinepayergui",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "paymentmachinepayergui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/money/world/inventory/PaymentmachinepayerguiMenu.java",
+          "src/main/java/net/mcreator/money/network/PaymentmachinepayerguiButtonMessage.java",
+          "src/main/java/net/mcreator/money/client/gui/PaymentmachinepayerguiScreen.java"
+        ]
+      }
+    },
+    {
+      "name": "Paymentmachinecollectmoney",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "paymentmachinecollectmoney",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/money/procedures/PaymentmachinecollectmoneyProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "PaymentMachine",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "payment_machine",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/money/loot_table/blocks/payment_machine.json",
+          "src/main/resources/assets/money/items/payment_machine.json",
+          "src/main/java/net/mcreator/money/block/PaymentMachineBlock.java",
+          "src/main/java/net/mcreator/money/block/entity/PaymentMachineBlockEntity.java",
+          "src/main/resources/assets/money/models/item/payment_machine.json",
+          "src/main/resources/assets/money/blockstates/payment_machine.json",
+          "src/main/resources/assets/money/models/block/payment_machine.json"
+        ]
+      }
+    },
+    {
+      "name": "Paymentmachineguideciderprocedure",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "paymentmachineguideciderprocedure",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/money/procedures/PaymentmachineguideciderprocedureProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "SimpleBankFeature",
+      "type": "feature",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "simple_bank_feature",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/money/worldgen/placed_feature/simple_bank_feature.json",
+          "src/main/resources/data/money/neoforge/biome_modifier/simple_bank_feature_biome_modifier.json",
+          "src/main/resources/data/money/worldgen/configured_feature/simple_bank_feature.json"
+        ],
+        "has_nbt_structure": true
+      }
+    },
+    {
+      "name": "PaymentMachinePayerGUITitle",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "payment_machine_payer_gui_title",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/money/procedures/PaymentMachinePayerGUITitleProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "PaymentMachineSpecialInformation",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "payment_machine_special_information",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/money/procedures/PaymentMachineSpecialInformationProcedure.java"
+        ],
+        "dependencies": []
+      }
+    },
+    {
+      "name": "MoneyModItems",
+      "type": "tab",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "money_mod_items",
+      "metadata": {
+        "files": []
+      }
+    },
+    {
+      "name": "OneCash",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "one_cash",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/money/item/OneCashItem.java",
+          "src/main/resources/assets/money/models/item/one_cash.json",
+          "src/main/resources/assets/money/items/one_cash.json"
+        ]
+      }
+    },
+    {
+      "name": "FiveCash",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "five_cash",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/money/models/item/five_cash.json",
+          "src/main/resources/assets/money/items/five_cash.json",
+          "src/main/java/net/mcreator/money/item/FiveCashItem.java"
+        ]
+      }
+    },
+    {
+      "name": "TenCash",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ten_cash",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/money/items/ten_cash.json",
+          "src/main/resources/assets/money/models/item/ten_cash.json",
+          "src/main/java/net/mcreator/money/item/TenCashItem.java"
+        ]
+      }
+    },
+    {
+      "name": "TwentyCash",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "twenty_cash",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/money/models/item/twenty_cash.json",
+          "src/main/java/net/mcreator/money/item/TwentyCashItem.java",
+          "src/main/resources/assets/money/items/twenty_cash.json"
+        ]
+      }
+    },
+    {
+      "name": "FiftyCash",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fifty_cash",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/money/items/fifty_cash.json",
+          "src/main/java/net/mcreator/money/item/FiftyCashItem.java",
+          "src/main/resources/assets/money/models/item/fifty_cash.json"
+        ]
+      }
+    },
+    {
+      "name": "HundredCash",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hundred_cash",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/money/item/HundredCashItem.java",
+          "src/main/resources/assets/money/models/item/hundred_cash.json",
+          "src/main/resources/assets/money/items/hundred_cash.json"
+        ]
+      }
+    },
+    {
+      "name": "ATMGUIClosed",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "atmgui_closed",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/money/procedures/ATMGUIClosedProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "ATMGUIPinVerified",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "atmgui_pin_verified",
+      "metadata": {
+        "dependencies": [],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/money/procedures/ATMGUIPinVerifiedProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "ATMGUIVerifyPin",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "atmgui_verify_pin",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/money/procedures/ATMGUIVerifyPinProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "ATMGUIBalanceLabel",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "atmgui_balance_label",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/money/procedures/ATMGUIBalanceLabelProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "ATMGUIPinVerifiedNegated",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "atmgui_pin_verified_negated",
+      "metadata": {
+        "dependencies": [],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/money/procedures/ATMGUIPinVerifiedNegatedProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "ATMGUIDepositButtonProcedure",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "atmgui_deposit_button_procedure",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/money/procedures/ATMGUIDepositButtonProcedureProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "ATMGUIWithdrawButtonProcedure",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "atmgui_withdraw_button_procedure",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/money/procedures/ATMGUIWithdrawButtonProcedureProcedure.java"
+        ]
+      }
+    }
+  ],
+  "variable_elements": [
+    {
+      "name": "CardVerified",
+      "type": "logic",
+      "scope": "global",
+      "value": "false"
+    }
+  ],
+  "sound_elements": [],
+  "tag_elements": {
+    "BLOCKS:minecraft:mineable/pickaxe": [
+      "~CUSTOM:PaymentMachine",
+      "~CUSTOM:ATM",
+      "~CUSTOM:CardMaker"
+    ]
+  },
+  "tab_element_order": {},
+  "language_map": {
+    "en_us": {
+      "gui.money.paymentmachinepayergui.pin": "Enter PIN",
+      "block.money.payment_machine": "Payment Machine",
+      "gui.money.atmgui.label_insert_cashcoins": "Insert Cash/Coins",
+      "gui.money.paymentmachineownergui.price": "",
+      "gui.money.paymentmachineownergui.button_collect_money_if_any": "Collect Money (If any)",
+      "gui.money.cardupgradergui.label_card_upgrader": "Card Upgrader",
+      "gui.money.paymentmachinepayergui.label_insert_card": "Insert Card",
+      "gui.money.atmgui.cardpin": "",
+      "item.money.credit_card": "Credit Card",
+      "gui.money.paymentmachineownergui.label_modify_payment": "Modify Payment",
+      "gui.money.cardmakergui.initiallpin": "",
+      "gui.money.atmgui.label_insert_credit_card": "Insert Credit Card",
+      "gui.money.cardupgradergui.label_is_1000000": " is 1,000,000",
+      "gui.money.atmgui.button_check_credit": "Check Credit",
+      "gui.money.cardmakergui.button_create": "Create",
+      "gui.money.paymentmachinepayergui.label_payment": "Payment",
+      "gui.money.cardupgradergui.label_insert_credit_card": "Insert Credit Card",
+      "item.money.coin": "Coin",
+      "item.money.gold_credit_card": "Gold Credit Card",
+      "gui.money.atmgui.label_atm": "ATM",
+      "gui.money.paymentmachinepayergui.label_price_bnbtnumberprice": "Price: \u003cBNBT:number:price\u003e",
+      "gui.money.exchangegui.button_convert": "Convert",
+      "gui.money.cardmakergui.label_enter_a_pin": "Enter a PIN",
+      "block.money.cardupgrader": "Card Upgrader",
+      "gui.money.cardupgradergui.label_note_minimum_money_required": "Note: Minimum money required",
+      "gui.money.paymentmachineownergui.pin": "Enter PIN",
+      "block.money.card_maker": "Card Maker",
+      "block.money.atm": "ATM",
+      "gui.money.cardmakergui.label_card_maker": "Card Maker",
+      "gui.money.cardupgradergui.button_get_gold_card": "Get Gold Card",
+      "block.money.exchange_block": "Exchange Block",
+      "gui.money.atmgui.label_withdraw": "Withdraw",
+      "gui.money.exchangegui.label_emeralds_in": "Emeralds In",
+      "gui.money.atmgui.amount": "withdraw amount (leave blank for deposit)",
+      "gui.money.atmgui.button_enter": "Enter",
+      "gui.money.atmgui.withdraw": "",
+      "gui.money.exchangegui.label_cash_out": "Cash Out",
+      "gui.money.paymentmachinepayergui.button_pay": "Pay",
+      "gui.money.atmgui.label_enter_pin": "Enter PIN",
+      "gui.money.exchangegui.label_exchange": "Exchange",
+      "gui.money.paymentmachineownergui.label_type_price": "Type Price",
+      "gui.money.paymentmachineownergui.button_start_payment": "Start Payment",
+      "item.money.card_maker": "Card Maker",
+      "item.money.atm": "ATM",
+      "item.money.exchange_block": "Exchange Block",
+      "item.money.cardupgrader": "Card Upgrader",
+      "item.money.payment_machine": "Payment Machine",
+      "item_group.money.money_mod_items": "Money Mod Items",
+      "item.money.one_cash": "$1 Cash",
+      "item.money.five_cash": "$5 Cash",
+      "item.money.ten_cash": "$10 Cash",
+      "item.money.twenty_cash": "$20 Cash",
+      "item.money.fifty_cash": "$50 Cash",
+      "item.money.hundred_cash": "$100 Cash",
+      "gui.money.atmgui.label_credit_card": "Credit Card",
+      "gui.money.atmgui.label_balance_100000": "Balance: $x,xxx.xx",
+      "gui.money.atmgui.label_deposit": "Deposit",
+      "gui.money.atmgui.button_deposit": "Deposit",
+      "gui.money.atmgui.label_cash_and_coins_only": "Cash And Coins Only",
+      "gui.money.atmgui.PIN": "Enter PIN",
+      "gui.money.atmgui.withdrawAmount": "Withdraw Amount",
+      "gui.money.atmgui.button_withdraw": "Withdraw",
+      "gui.money.atmgui.button_verify": "Verify",
+      "gui.money.atmgui.label_verified": "Verified",
+      "gui.money.atmgui.label_not_verified": "Unverified",
+      "gui.money.paymentmachineownergui.PIN": "Enter PIN",
+      "gui.money.paymentmachinepayergui.PIN": "Enter PIN",
+      "gui.money.cardmakergui.PIN": "PIN"
+    }
+  },
+  "metadata": {
+    "files": [
+      "src/main/java/net/mcreator/money/world/features/StructureFeature.java",
+      "src/main/java/net/mcreator/money/world/features/configurations/StructureFeatureConfiguration.java",
+      "src/main/java/net/mcreator/money/network/MenuStateUpdateMessage.java",
+      "src/main/java/net/mcreator/money/init/MoneyModScreens.java",
+      "src/main/java/net/mcreator/money/init/MoneyModMenus.java",
+      "src/main/java/net/mcreator/money/init/MoneyModBlocks.java",
+      "src/main/java/net/mcreator/money/init/MoneyModBlockEntities.java",
+      "src/main/java/net/mcreator/money/init/MoneyModItems.java",
+      "src/main/java/net/mcreator/money/init/MoneyModTabs.java",
+      "src/main/java/net/mcreator/money/network/MoneyModVariables.java",
+      "src/main/resources/META-INF/neoforge.mods.toml",
+      "src/main/resources/META-INF/accesstransformer.cfg",
+      "src/main/java/net/mcreator/money/MoneyMod.java",
+      "src/main/resources/pack.mcmeta"
+    ]
+  },
+  "foldersRoot": {
+    "name": "~",
+    "children": []
+  },
+  "workspaceSettings": {
+    "modid": "money",
+    "modName": "Money Mod",
+    "version": "5.1",
+    "description": "A mod for all your money needs",
+    "author": "hyper_creeper, MCreator",
+    "websiteURL": "https://mcreator.net",
+    "license": "Academic Free License v3.0",
+    "serverSideOnly": false,
+    "modPicture": "creditcardtexture",
+    "requiredMods": [],
+    "dependencies": [],
+    "dependants": [],
+    "mcreatorDependencies": [],
+    "currentGenerator": "neoforge-1.21.8",
+    "credits": "Created using mod maker MCreator - https://mcreator.net/about",
+    "modElementsPackage": "net.mcreator.money"
+  },
+  "mcreatorVersion": 202500345720
+}

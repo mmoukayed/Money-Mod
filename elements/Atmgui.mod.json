@@ -1,0 +1,382 @@
+{
+  "_fv": 79,
+  "_type": "gui",
+  "definition": {
+    "type": 1,
+    "width": 281,
+    "height": 230,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 32,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "label",
+        "data": {
+          "name": "label_atm",
+          "text": {
+            "fixedValue": "ATM"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 205,
+          "y": 12,
+          "locked": false
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "disablePlacement": {
+            "fixedValue": false
+          },
+          "id": 0,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": true,
+          "onTakenFromSlot": {
+            "name": "ATMGUIClosed"
+          },
+          "onStackTransfer": {
+            "name": "ATMGUIClosed"
+          },
+          "x": 83,
+          "y": 40,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_credit_card",
+          "text": {
+            "fixedValue": "Credit Card"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 83,
+          "y": 26,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_balance_100000",
+          "text": {
+            "fixedValue": "Balance: $xxxx.xx",
+            "name": "ATMGUIBalanceLabel"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 171,
+          "y": 25,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_deposit",
+          "text": {
+            "fixedValue": "Deposit"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 113,
+          "y": 72,
+          "locked": false
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "disablePlacement": {
+            "fixedValue": false,
+            "name": "ATMGUIPinVerifiedNegated"
+          },
+          "id": 1,
+          "disablePickup": {
+            "fixedValue": false,
+            "name": "ATMGUIPinVerifiedNegated"
+          },
+          "dropItemsWhenNotBound": true,
+          "x": 125,
+          "y": 97,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_cash_and_coins_only",
+          "text": {
+            "fixedValue": "Cash And Coins Only"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 86,
+          "y": 84,
+          "locked": false
+        }
+      },
+      {
+        "type": "textfield",
+        "data": {
+          "placeholder": "Enter PIN",
+          "name": "PIN",
+          "width": 120,
+          "height": 20,
+          "x": 106,
+          "y": 39,
+          "locked": false
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_deposit",
+          "text": "Deposit",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "ATMGUIDepositButtonProcedure"
+          },
+          "displayCondition": {
+            "name": "ATMGUIPinVerified"
+          },
+          "width": 61,
+          "height": 20,
+          "x": 103,
+          "y": 119,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_withdraw",
+          "text": {
+            "fixedValue": "Withdraw"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 259,
+          "y": 63,
+          "locked": false
+        }
+      },
+      {
+        "type": "textfield",
+        "data": {
+          "placeholder": "Withdraw Amount",
+          "name": "withdrawAmount",
+          "width": 120,
+          "height": 20,
+          "x": 220,
+          "y": 76,
+          "locked": false
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_withdraw",
+          "text": "Withdraw",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "ATMGUIWithdrawButtonProcedure"
+          },
+          "displayCondition": {
+            "name": "ATMGUIPinVerified"
+          },
+          "width": 67,
+          "height": 20,
+          "x": 248,
+          "y": 119,
+          "locked": false
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 3,
+          "disablePickup": {
+            "fixedValue": false,
+            "name": "ATMGUIPinVerifiedNegated"
+          },
+          "dropItemsWhenNotBound": true,
+          "x": 220,
+          "y": 98,
+          "locked": false
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 4,
+          "disablePickup": {
+            "fixedValue": false,
+            "name": "ATMGUIPinVerifiedNegated"
+          },
+          "dropItemsWhenNotBound": true,
+          "x": 240,
+          "y": 98,
+          "locked": false
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 5,
+          "disablePickup": {
+            "fixedValue": false,
+            "name": "ATMGUIPinVerifiedNegated"
+          },
+          "dropItemsWhenNotBound": true,
+          "x": 261,
+          "y": 98,
+          "locked": false
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 6,
+          "disablePickup": {
+            "fixedValue": false,
+            "name": "ATMGUIPinVerifiedNegated"
+          },
+          "dropItemsWhenNotBound": true,
+          "x": 281,
+          "y": 98,
+          "locked": false
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 7,
+          "disablePickup": {
+            "fixedValue": false,
+            "name": "ATMGUIPinVerifiedNegated"
+          },
+          "dropItemsWhenNotBound": true,
+          "x": 302,
+          "y": 98,
+          "locked": false
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 8,
+          "disablePickup": {
+            "fixedValue": false,
+            "name": "ATMGUIPinVerifiedNegated"
+          },
+          "dropItemsWhenNotBound": true,
+          "x": 322,
+          "y": 98,
+          "locked": false
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 9,
+          "disablePickup": {
+            "fixedValue": false,
+            "name": "ATMGUIPinVerifiedNegated"
+          },
+          "dropItemsWhenNotBound": true,
+          "x": 322,
+          "y": 120,
+          "locked": false
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_verify",
+          "text": "Verify",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "ATMGUIVerifyPin"
+          },
+          "width": 56,
+          "height": 20,
+          "x": 231,
+          "y": 39,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_not_verified",
+          "text": {
+            "fixedValue": "Unverified"
+          },
+          "color": {
+            "value": -65536,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "ATMGUIPinVerifiedNegated"
+          },
+          "x": 291,
+          "y": 43,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_verified",
+          "text": {
+            "fixedValue": "Verified"
+          },
+          "color": {
+            "value": -16724992,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "ATMGUIPinVerified"
+          },
+          "x": 291,
+          "y": 43,
+          "locked": false
+        }
+      }
+    ],
+    "onClosed": {
+      "name": "ATMGUIClosed"
+    },
+    "gridSettings": {
+      "sx": 18,
+      "sy": 9,
+      "ox": 13,
+      "oy": 23,
+      "snapOnGrid": false
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "parent": "money:custom/payment_machine",
+  "textures": {
+    "all": "money:block/texture",
+    "particle": "money:block/texture",
+    "0": "money:block/texture"
+  },
+  "render_type": "cutout"
+}

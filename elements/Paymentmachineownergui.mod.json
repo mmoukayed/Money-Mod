@@ -1,0 +1,129 @@
+{
+  "_fv": 79,
+  "_type": "gui",
+  "definition": {
+    "type": 1,
+    "width": 176,
+    "height": 230,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 30,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "label",
+        "data": {
+          "name": "label_modify_payment",
+          "text": {
+            "fixedValue": "Modify Payment"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 172,
+          "y": 10,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_type_price",
+          "text": {
+            "fixedValue": "Type Price"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 184,
+          "y": 24,
+          "locked": false
+        }
+      },
+      {
+        "type": "textfield",
+        "data": {
+          "placeholder": "",
+          "name": "price",
+          "width": 120,
+          "height": 20,
+          "x": 151,
+          "y": 39,
+          "locked": false
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_start_payment",
+          "text": "Start Payment",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "Paymentmachineownerguistartpayment"
+          },
+          "width": 93,
+          "height": 20,
+          "x": 165,
+          "y": 64,
+          "locked": false
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_collect_money_if_any",
+          "text": "Collect Money (If any)",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "Paymentmachinecollectmoney"
+          },
+          "width": 139,
+          "height": 20,
+          "x": 142,
+          "y": 120,
+          "locked": false
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "disablePlacement": {
+            "fixedValue": false
+          },
+          "id": 0,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": true,
+          "x": 143,
+          "y": 96,
+          "locked": false
+        }
+      },
+      {
+        "type": "textfield",
+        "data": {
+          "placeholder": "Enter PIN",
+          "name": "PIN",
+          "width": 120,
+          "height": 20,
+          "x": 167,
+          "y": 95,
+          "locked": false
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

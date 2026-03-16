@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "money:block/atm"
+    },
+    "facing=east": {
+      "model": "money:block/atm",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "money:block/atm",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "money:block/atm",
+      "y": 270
+    }
+  }
+}

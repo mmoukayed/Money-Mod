@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "money:block/card_maker"
+    },
+    "facing=east": {
+      "model": "money:block/card_maker",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "money:block/card_maker",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "money:block/card_maker",
+      "y": 270
+    }
+  }
+}

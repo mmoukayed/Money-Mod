@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "money:block/atmtexturesidesbottomtop",
+    "up": "money:block/atmtexturesidesbottomtop",
+    "north": "money:block/exchangefront",
+    "east": "money:block/atmtexturesidesbottomtop",
+    "south": "money:block/atmtexturesidesbottomtop",
+    "west": "money:block/atmtexturesidesbottomtop",
+    "particle": "money:block/atmtexturesidesbottomtop"
+  },
+  "render_type": "solid"
+}

@@ -1,0 +1,8 @@
+{
+  "_fv": 79,
+  "_type": "procedure",
+  "definition": {
+    "procedurexml": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?><xml xmlns=\"https://developers.google.com/blockly/xml\"><block deletable=\"false\" type=\"event_trigger\" x=\"40\" y=\"40\"><field name=\"trigger\">no_ext_trigger</field><next><block type=\"return_string\"><value name=\"return\"><block type=\"text\"><field name=\"TEXT\">Special block used to pay and earn money</field></block></value></block></next></block><block type=\"text_join\" x=\"243\" y=\"203\"><mutation items=\"2\"/></block><block type=\"entity_name\" x=\"691\" y=\"278\"><value name=\"entity\"><block type=\"entity_from_deps\"/></value></block><block type=\"text_new_line\" x=\"597\" y=\"421\"/></xml>",
+    "skipDependencyNullCheck": false
+  }
+}

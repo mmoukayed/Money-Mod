@@ -1,0 +1,11 @@
+{
+  "_fv": 79,
+  "_type": "tab",
+  "definition": {
+    "name": "Money Mod Items",
+    "icon": {
+      "value": "CUSTOM:CreditCard"
+    },
+    "showSearch": false
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "money:payment_machine",
+    "money:atm",
+    "money:card_maker"
+  ]
+}

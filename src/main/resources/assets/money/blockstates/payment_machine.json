@@ -1,0 +1,27 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "money:block/payment_machine"
+    },
+    "facing=east": {
+      "model": "money:block/payment_machine",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "money:block/payment_machine",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "money:block/payment_machine",
+      "y": 270
+    },
+    "facing=up": {
+      "model": "money:block/payment_machine",
+      "x": 270
+    },
+    "facing=down": {
+      "model": "money:block/payment_machine",
+      "x": 90
+    }
+  }
+}
