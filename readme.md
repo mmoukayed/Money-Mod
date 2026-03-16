@@ -62,17 +62,17 @@ No additional dependencies are required.
 ### Credit Card Commands
 
 
-credit add <player> <amount>
+`credit add <player> <amount>`
 
 Adds the specified amount to the **credit card the player is holding**.
 
 
-credit subtract <player> <amount>
+`credit subtract <player> <amount>`
 
 Removes the specified amount from the **credit card the player is holding**.
 
 
-credit balance
+`credit balance`
 
 Displays the **balance of the credit card you are currently holding**.
 
